@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rechercher des tâches</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Connexion.css') }}">
+
+</head>
+<body>
+    <h2>Rechercher des tâches</h2>
+    <form action="/rechercher" method="post">
+        <div class="contenu"> 
+            <div id="contain">
+                <label for="terme_recherche">Titre de la tâche :</label>
+                <input type="text" id="terme_recherche" name="terme_recherche">
+                <button type="submit">Rechercher</button>
+            </div>
+        </div>
+    </form>
+    
+</body>
+</html>

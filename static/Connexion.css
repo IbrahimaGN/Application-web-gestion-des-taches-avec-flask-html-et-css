@@ -1,0 +1,65 @@
+body{
+    height: auto;
+    margin: 0%;
+    padding: 10vh 30%;
+    background-color: burlywood;
+    align-items: center;
+}
+.contenu{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    border-bottom: 8px solid red;
+    border-radius: 20px;
+}
+#contain{
+    width: 90%;
+    height: auto;
+    color: white;
+    font-weight: bold;
+    background-image: url('WhatsApp\ Image\ 2024-05-12\ at\ 22.59.00.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10% 5%;
+    border-radius: 20px;
+
+}
+h2,h3 , .inscrire{
+    width: 100%;
+    color: red;
+    text-align: center;
+}
+h1,h3 {
+    width: 100%;
+    color: black;
+    text-align: center;
+}
+.inscrire{
+    width: 90%;
+    color: red;
+    text-align: right;
+    padding: 5% 0;
+}
+input, select{
+    width: 100%;
+    height: 35px;
+    border-radius: 15px ;
+    margin-bottom: 5%;
+    border: none;
+}
+::placeholder{
+    text-align: center;
+}
+button{
+    width: 100%;
+    height: 35px;
+    border-radius: 15px ;
+    text-align: center;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    
+}

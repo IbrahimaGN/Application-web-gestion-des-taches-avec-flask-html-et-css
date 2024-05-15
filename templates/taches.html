@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>taches</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+            background-color: white;
+        }
+
+        th {
+            background-color: burlywood;
+        }
+        body{
+            height: auto;
+            margin: 0%;
+            padding: 3vh 10%;
+            background-image: url('static/WhatsApp\ Image\ 2024-05-12\ at\ 22.59.00.jpeg');
+            background-repeat: repeat;
+            background-size: cover;
+            align-items: center;
+        }
+        h1{
+            width: 100%;
+            color: white;
+            text-align: center;
+        }
+        .mis{
+            width: 10%;
+            height: 30px;
+            color: blue;
+            font-weight: bold;
+        }
+        .modifier{
+            width: 5%;
+            height: 30px;
+            color: green;
+            font-weight: bold;
+        }
+        .supprimer{
+            width: 5%;
+            height: 30px;
+            color: red;
+            font-weight: bold;
+        }
+        
+        button.ajout {
+            width: 10%;
+            height: 45px;
+            background-color: orange;
+            color: white;
+            font-size: 200;
+            font-weight: bold;
+            float: right;
+            border-radius: 20px;
+
+        }
+        .recherche {
+            width: 7%;
+            height: 30px;
+            background-color: orange;
+            color: black;
+            font-size: 200;
+            font-weight: bold;
+            float: left;
+            border-radius: 15px;
+        }
+
+        .ajout a, .supprimer, .mis, .modifier{
+            text-decoration: none;
+        }
+        .terme{
+            width: 20%;
+            height: 30px;
+            border-radius: 15px;
+            float: left;
+        }
+        .action{
+            background-color: pink;
+        }
+    </style>
+
+</head>
+<body>
+    <form action="/rechercher" method="post">
+        <div class="contenu"> 
+            <div id="contain">
+                <input type="text" class="terme" id="terme_recherche" name="terme_recherche" placeholder="Rechercher selon le titre">
+                <button type="submit" class="recherche">OK</button>
+            </div>
+        </div>
+    </form>
+    <button class="ajout"><a href="Tache.html">Ajouter</a></button>
+    <h1>Liste des tâches</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Id_tache</th>
+                <th>Titre</th>
+                <th>Description</th>
+                <th>Statut</th>
+                <th>Date_création</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for tache in taches %}
+            <tr>
+                <td>{{ tache[0] }}</td> <!-- Index 0 pour Id_tache -->
+                <td>{{ tache[1] }}</td> <!-- Index 1 pour Titre -->
+                <td>{{ tache[2] }}</td> <!-- Index 2 pour Description -->
+                <td>{{ tache[3] }}</td> <!-- Index 3 pour Statut -->
+                <td>{{ tache[4] }}</td> <!-- Index 3 pour Date de création -->
+                <td  class="action"> <a href="/mettre_a_jour/{{ tache[0] }}" class="mis">End</a>
+                <a href="/modifier/{{ tache[0] }}" class="modifier">Edit</a>
+                <a href="/supprimer/{{ tache[0] }}" class="supprimer">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

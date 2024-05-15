@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier une tâche</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Connexion.css') }}">
+</head>
+<body>
+    <h1>Modifier une tâche</h1>
+    <form method="POST">
+        <div class="contenu"> 
+            <div id="contain">
+                <label for="titre">Titre :</label><br>
+                <input type="text" id="titre" name="titre" value="{{ tache[1] }}"><br>
+                <label for="description">Description :</label><br>
+                <input type="text" id="description" name="description" value="{{ tache[2] }}"><br>
+                <label for="statue">Statut :</label><br>
+                <input type="text" id="statue" name="statue" value="{{ tache[3] }}"><br>
+                <button type="submit">Modifier</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

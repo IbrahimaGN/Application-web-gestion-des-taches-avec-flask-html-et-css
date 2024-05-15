@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Connexion.css') }}">
+    <title>Tache</title>
+</head>
+<body>
+    <form method="post" action="/Tache.html">
+        <h2>Nouvelle Tache</h2>
+        <div class="contenu"> 
+            <div id="contain">
+                <div>
+                    <Label>Titre</Label><br>
+                    <input type="text" name="titre" placeholder="Entrer le titre de la tache" required/>
+                </div>
+                <div>
+                    <Label>Description</Label><br>
+                    <input type="text" name="description" placeholder="Faire la description de la tache" required/>
+                </div>
+                <div>
+                    <Label>Statut</Label><br>
+                    <select name="statue" id="">
+                        <option value="Non terminée">Non Terminée</option>
+                        <option value="Terminée">Terminée</option>
+                    </select>
+                </div>
+        
+                <button type="submit">Validation</button>
+        
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Inscription.css') }}">
+</head>
+<body>
+    <h1>Formulaire d'inscription</h1>
+    <form method="post" action="/Inscription.html" >
+        <div class="contenu">
+            <div class="contain">
+                <div>
+                    <label for="">Nom</label><br>
+                    <input type="text" name="nom" placeholder="Entrer votre nom " required/>
+                </div>
+                <div>
+                    <label for="">Prénom</label><br>
+                    <input type="text" name="prenom" placeholder="Entrer votre prénom " required/>
+                </div>
+                <div>
+                    <label for="">Email</label><br>
+                    <input type="text" name="email" placeholder="Entrer votre Email " required/>
+                </div>
+                <div>
+                    <label for="">Mot de passe</label><br>
+                    <input type="password" name="password" placeholder="Entrer votre mot de passe " required/>
+                </div>
+                <div>
+                    <label for="">Confirmer votre mot de passe</label><br>
+                    <input type="password" name="confirm_password" placeholder="Confirmer votre mot de passe " required/>
+                </div>
+                <div>
+                    <label for="">Téléphone</label><br>
+                    <input type="number" name="telephone" placeholder="Entrer votre numero de Téléphone" required/> 
+                </div>
+                <button type="submit">Inscrire</button>
+            </div>
+            <div class="connecter">Vous avez déjà un compte <a href="Connexion.html">Se Connecter</a></div>
+        </div>
+    </form>
+</body>
+</html>
